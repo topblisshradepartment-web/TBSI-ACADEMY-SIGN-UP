@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TopBliss Academy — Sign Up</title>
+<style>
+  :root{
+    --bg:#F5F3EC; --card:#FFFFFF; --ink:#1E2B23; --ink-soft:#5B6B5F;
+    --line:#E1DDCF; --teal:#0F6E56; --teal-dark:#0A4F3F; --teal-soft:#DCEEE7;
+    --amber:#B7791F; --amber-soft:#F7E9D2;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:40px 20px 80px;}
+  .wrap{max-width:640px;margin:0 auto;}
+
+  .eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 8px;text-align:center;}
+  h1{font-size:30px;margin:0 0 6px;font-weight:800;text-align:center;letter-spacing:-0.02em;}
+  .sub{color:var(--ink-soft);font-size:15px;margin:0 0 28px;text-align:center;line-height:1.5;}
+
+  .pillars{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
+  .pillar-chip{background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:6px 12px;border-radius:20px;}
+
+  .notice{background:var(--amber-soft);border:1px solid var(--amber);color:#5c3d0a;border-radius:12px;padding:14px 16px;font-size:13px;line-height:1.6;margin-bottom:28px;}
+  .notice b{display:block;margin-bottom:2px;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 1px 3px rgba(30,43,35,0.06);}
+
+  .schedule{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+  .sched-box{background:var(--bg);border-radius:10px;padding:12px 14px;text-align:center;}
+  .sched-box .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:4px;}
+  .sched-box .val{font-size:15px;font-weight:700;color:var(--teal-dark);}
+
+  label{display:block;font-size:13px;font-weight:600;margin:16px 0 6px;}
+  label:first-of-type{margin-top:0;}
+  input[type=text],input[type=tel],textarea{
+    width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+    font-size:14px;font-family:inherit;background:#fff;color:var(--ink);
+  }
+  input:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal);}
+  textarea{resize:vertical;min-height:70px;}
+  .hint{font-size:12px;color:var(--ink-soft);margin-top:4px;}
+
+  .submit-btn{
+    width:100%;background:var(--teal);color:#fff;border:none;border-radius:10px;
+    padding:14px;font-size:15px;font-weight:700;cursor:pointer;margin-top:24px;
+  }
+  .submit-btn:hover{background:var(--teal-dark);}
+  .submit-btn:disabled{opacity:0.6;cursor:not-allowed;}
+
+  .success{display:none;text-align:center;padding:20px 0;}
+  .success.show{display:block;}
+  .success .icon{font-size:40px;margin-bottom:12px;}
+  .success h2{font-size:20px;margin:0 0 8px;color:var(--teal-dark);}
+  .success p{color:var(--ink-soft);font-size:14px;margin:0;}
+  .form-body.hide{display:none;}
+
+  .admin-toggle{
+    text-align:center;margin-top:32px;font-size:12px;color:var(--ink-soft);
+    cursor:pointer;text-decoration:underline;
+  }
+  .admin-panel{display:none;margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;}
+  .admin-panel.show{display:block;}
+  .admin-panel h3{font-size:14px;margin:0 0 14px;display:flex;justify-content:space-between;align-items:center;}
+  .admin-note{font-size:11px;color:var(--ink-soft);margin-bottom:14px;line-height:1.5;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;padding:8px;background:var(--bg);color:var(--ink-soft);font-size:11px;text-transform:uppercase;}
+  td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .empty-admin{text-align:center;color:var(--ink-soft);font-size:13px;padding:16px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">TopBliss People Development</p>
+  <h1>TopBliss Academy</h1>
+  <p class="sub">Personal Development · Batch 1 sign-up</p>
+
+  <div class="pillars">
+    <span class="pillar-chip">🌱 Growth Mindset</span>
+    <span class="pillar-chip">🎯 Ownership</span>
+    <span class="pillar-chip">⚙️ Systems</span>
+    <span class="pillar-chip">👑 Vision</span>
+  </div>
+
+  <div class="notice">
+    <b>⚠️ This program runs outside office hours.</b>
+    Joining is 100% voluntary — whether or not you join has no impact on your job or performance review.
+  </div>
+
+  <div class="card">
+    <div class="schedule">
+      <div class="sched-box">
+        <div class="lbl">Sign-up deadline</div>
+        <div class="val">Aug 22</div>
+      </div>
+      <div class="sched-box">
+        <div class="lbl">First session</div>
+        <div class="val">Aug 24</div>
+      </div>
+      <div class="sched-box">
+        <div class="lbl">Weekly, every</div>
+        <div class="val">Wednesday</div>
+      </div>
+      <div class="sched-box">
+        <div class="lbl">Time</div>
+        <div class="val">6:00–7:30 PM</div>
+      </div>
+    </div>
+
+    <form id="signup-form">
+      <div class="form-body" id="form-body">
+        <label for="name">Full name</label>
+        <input type="text" id="name" required placeholder="Juan Dela Cruz">
+
+        <label for="dept">Department / Team</label>
+        <input type="text" id="dept" required placeholder="e.g. Distribution, Marketplace, Finance">
+
+        <label for="contact">Contact number</label>
+        <input type="tel" id="contact" required placeholder="09XX XXX XXXX">
+
+        <label for="telegram">Telegram username <span style="font-weight:400;color:var(--ink-soft);">(optional)</span></label>
+        <input type="text" id="telegram" placeholder="@username">
+
+        <label for="why">Why do you want to join?</label>
+        <textarea id="why" required placeholder="A sentence or two is fine"></textarea>
+        <div class="hint">No perfect answer needed — we just want to know what's pulling you toward this.</div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Sign up for Batch 1</button>
+      </div>
+
+      <div class="success" id="success-msg">
+        <div class="icon">🎉</div>
+        <h2>You're on the list!</h2>
+        <p>We'll follow up with next steps before the first session on August 24.</p>
+      </div>
+    </form>
+  </div>
+
+  <p class="admin-toggle">Sign-ups are saved directly to our Google Sheet — check there for the full list.</p>
+</div>
+
+<script>
+// TODO: Paste your Google Apps Script Web App URL here after deploying (Step 1).
+const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+document.getElementById('signup-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  const entry = {
+    name: document.getElementById('name').value.trim(),
+    dept: document.getElementById('dept').value.trim(),
+    contact: document.getElementById('contact').value.trim(),
+    telegram: document.getElementById('telegram').value.trim(),
+    why: document.getElementById('why').value.trim()
+  };
+
+  try{
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(entry)
+    });
+    document.getElementById('form-body').classList.add('hide');
+    document.getElementById('success-msg').classList.add('show');
+  }catch(err){
+    btn.disabled = false;
+    btn.textContent = 'Sign up for Batch 1';
+    alert('Something went wrong submitting your sign-up. Please try again.');
+  }
+});
+
+</script>
+</body>
+</html>
