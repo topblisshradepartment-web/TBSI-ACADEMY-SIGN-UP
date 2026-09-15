@@ -72,7 +72,7 @@
 <div class="wrap">
   <p class="eyebrow">TopBliss People Development</p>
   <h1>TopBliss Academy</h1>
-  <p class="sub">Personal Development · Batch 1 sign-up</p>
+  <p class="sub">Personal Development · Batch 2 sign-up</p>
 
   <div class="pillars">
     <span class="pillar-chip">🌱 Growth Mindset</span>
@@ -90,11 +90,11 @@
     <div class="schedule">
       <div class="sched-box">
         <div class="lbl">Sign-up deadline</div>
-        <div class="val">Aug 22</div>
+        <div class="val">Sep 20</div>
       </div>
       <div class="sched-box">
         <div class="lbl">First session</div>
-        <div class="val">Aug 24</div>
+        <div class="val">Sep 23</div>
       </div>
       <div class="sched-box">
         <div class="lbl">Weekly, every</div>
@@ -124,13 +124,13 @@
         <textarea id="why" required placeholder="A sentence or two is fine"></textarea>
         <div class="hint">No perfect answer needed — we just want to know what's pulling you toward this.</div>
 
-        <button type="submit" class="submit-btn" id="submit-btn">Sign up for Batch 1</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Sign up for Batch 2</button>
       </div>
 
       <div class="success" id="success-msg">
         <div class="icon">🎉</div>
         <h2>You're on the list!</h2>
-        <p>We'll follow up with next steps before the first session on August 24.</p>
+        <p>We'll follow up with next steps before the first session on September 23.</p>
       </div>
     </form>
   </div>
@@ -140,7 +140,7 @@
 
 <script>
 // TODO: Paste your Google Apps Script Web App URL here after deploying (Step 1).
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwdBuGBUYAfzTJ-K3gA_IVSffbk3sCip3eJQW1nAkCQhQaxdWCELhn2edXMi9_EUs7o/exec";
+const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
 
 function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 
@@ -167,7 +167,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
     document.getElementById('success-msg').classList.add('show');
   }catch(err){
     btn.disabled = false;
-    btn.textContent = 'Sign up for Batch 1';
+    btn.textContent = 'Sign up for Batch 2';
     alert('Something went wrong submitting your sign-up. Please try again.');
   }
 });
