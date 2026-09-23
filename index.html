@@ -140,7 +140,7 @@
 
 <script>
 // TODO: Paste your Google Apps Script Web App URL here after deploying (Step 1).
-const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwdBuGBUYAfzTJ-K3gA_IVSffbk3sCip3eJQW1nAkCQhQaxdWCELhn2edXMi9_EUs7o/exec";
 
 function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 
@@ -159,16 +159,19 @@ document.getElementById('signup-form').addEventListener('submit', async function
   };
 
   try{
-    await fetch(SCRIPT_URL, {
+    const res = await fetch(SCRIPT_URL, {
       method: 'POST',
       body: JSON.stringify(entry)
     });
+    if(!res.ok){
+      throw new Error('Server responded with status ' + res.status);
+    }
     document.getElementById('form-body').classList.add('hide');
     document.getElementById('success-msg').classList.add('show');
   }catch(err){
     btn.disabled = false;
     btn.textContent = 'Sign up for Batch 2';
-    alert('Something went wrong submitting your sign-up. Please try again.');
+    alert('Something went wrong submitting your sign-up. Please try again, or message HR directly.');
   }
 });
 
